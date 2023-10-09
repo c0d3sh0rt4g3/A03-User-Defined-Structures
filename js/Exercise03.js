@@ -23,4 +23,4 @@ const sortNumberArray = (arrayGiven) =>{
 const numbersMatrix = [[5, 4, 6], [2, 9, 3], [8, 1, 7]]
 const numberArray = matrixToArray(numbersMatrix)
 const orderedArray = sortNumberArray(numberArray)
-alert(orderedArray)
+document.write(orderedArray.toString())
