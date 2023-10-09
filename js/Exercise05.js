@@ -65,9 +65,10 @@ class Programmer extends Worker{
     }
 }
 const ceo = new CEO(1, "John", "Smith", new Date("2004-07-28"), [])
-const boss = new Boss(3, "Willy", "Williamson", new Date("2004-07-28"), 4, [])
-const programmer = new Programmer(4, "Johnny", "Williamson", new Date("2004-07-28")
-                                                , "High School", "2 months")
+const programmer = new Programmer(4, "Johnny", "Williamson", new Date("2004-07-28"),
+                    "High School", "2 months")
+const boss = new Boss(3, "Willy", "Williamson", new Date("2004-07-28"), 4, [programmer])
+
 ceo.focus()
 ceo.travel("Madrid")
 ceo.direct()
