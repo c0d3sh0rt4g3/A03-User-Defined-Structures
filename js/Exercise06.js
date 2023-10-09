@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const newColor = document.createElement("div")
         newColor.innerHTML = randomColor;
         newColor.style.backgroundColor = randomColor;
+        newColor.className = "randomColorBox"
         console.log(randomColor + " " + i)
         colorsContainer.appendChild(newColor)
     }

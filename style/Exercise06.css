@@ -1,0 +1,8 @@
+.randomColorBox{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid black;
+}
