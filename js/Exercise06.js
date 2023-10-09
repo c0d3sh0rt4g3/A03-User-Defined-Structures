@@ -8,14 +8,13 @@ class Ghost {
 
 const ghost = new Ghost()
 const colorsContainer = document.getElementById("colorsContainer")
-document.addEventListener("DOMContentLoaded", function() {
-    for (let i = 0; i < 1000; i++){
-        const randomColor = ghost.getColor()
-        const newColor = document.createElement("div")
-        newColor.innerHTML = randomColor;
-        newColor.style.backgroundColor = randomColor;
-        newColor.className = "randomColorBox"
-        console.log(randomColor + " " + i)
-        colorsContainer.appendChild(newColor)
-    }
-})
+
+for (let i = 0; i < 1000; i++){
+    const randomColor = ghost.getColor()
+    const newColor = document.createElement("div")
+    newColor.innerHTML = randomColor;
+    newColor.style.backgroundColor = randomColor;
+    newColor.className = "randomColorBox"
+    console.log(randomColor + " " + i)
+    colorsContainer.appendChild(newColor)
+}
