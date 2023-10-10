@@ -1,10 +1,41 @@
-class Caesar{
-    constructor(displacementNumber = 1) {
-        this.displacementNumber = displacementNumber
+class CesarCipher {
+  constructor(displacementNumber = 1) {
+    this.displacementNumber = displacementNumber
+  }
+
+  encode(text = "Hello, World") {
+    let result = ''
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i].toUpperCase()
+      if (char >= 'A' && char <= 'Z') {
+        const displacedCharCode = ((char.charCodeAt(0) - 65 + this.displacementNumber) % 26) + 65
+        result += String.fromCharCode(displacedCharCode)
+      } else {
+        result += char
+      }
     }
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l', 'ñ','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    encode(textToEncode = "hello"){
-        const textToEncodeLowerCase = textToEncode.toLowerCase()
+    return result
+  }
+
+  decode(text = "fcjjm, umpjb") {
+    let result = ''
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i].toUpperCase()
+      if (char >= 'A' && char <= 'Z') {
+        const displacedCharCode = ((char.charCodeAt(0) - 65 - this.displacementNumber + 26) % 26) + 65
+        result += String.fromCharCode(displacedCharCode)
+      } else {
+        result += char
+      }
     }
+    return result
+  }
 }
-const caesar = new Caesar(22)
+
+// Ejemplo de uso:
+const cipher = new CesarCipher(24)
+const encodedText = cipher.encode("Welcome to Caesar Chipher!")
+console.log(encodedText)
+
+const decodedText = cipher.decode(encodedText)
+console.log(decodedText)
