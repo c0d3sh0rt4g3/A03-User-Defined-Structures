@@ -35,7 +35,7 @@ class CesarCipher {
 // Ejemplo de uso:
 const cipher = new CesarCipher(24)
 const encodedText = cipher.encode("Welcome to Caesar Chipher!")
-console.log(encodedText)
+document.write(encodedText + "<br>")
 
 const decodedText = cipher.decode(encodedText)
-console.log(decodedText)
+document.write(decodedText + "<br>")
